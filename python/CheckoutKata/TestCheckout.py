@@ -1,2 +1,2 @@
-def test_assertTrue():
-    assert False
+def test_canCreateInstanceCheckout():
+    co = Checkout()
