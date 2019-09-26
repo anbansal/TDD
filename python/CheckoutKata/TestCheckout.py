@@ -1,11 +1,16 @@
+import pytest
 from Checkout import Checkout
 
 
-def test_canAddItemPrice():
-    co = Checkout()
-    co.addItemPrice("a",1)
+@pytest.fixture()
+def checkout():
+    checkout = Checkout()
+    return checkout
 
 
-def test_canAddItem():
-    co = Checkout()
-    co.addItem("a")
+def test_canAddItemPrice(checkout):
+    checkout.addItemPrice("a", 1)
+
+
+def test_canAddItem(checkout):
+    checkout.addItem("a")
