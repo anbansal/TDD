@@ -1,6 +1,3 @@
-from pytest import raises
-
-
 class Checkout:
     class Discount:
         def __init__(self, NbrItems, Price):
@@ -16,7 +13,9 @@ class Checkout:
         self.prices[item] = price
 
     def addItem(self, item):
-        if item in self.items:
+        if item not in self.prices:
+            raise Exception("Bad Item")
+        elif item in self.items:
             self.items[item] += 1
         else:
             self.items[item] = 1
