@@ -21,6 +21,11 @@ class Checkout:
     def calculateTotal(self):
         total = 0
         for item, cnt in self.items.items():
+            if item in self.discount:
+                discount = self.discount[item]
+                if cnt >= discount.nbrItems:
+                    total += ((cnt / discount.nbrItems) * discount.price) + ((cnt % discount.nbrItems) * self.prices[item])
+                    continue
             total += self.prices[item] * cnt
         return total
 
