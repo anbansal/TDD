@@ -37,7 +37,7 @@ def test_canCorrectTotalMultipleItems(checkout):
 def test_canAddDiscountRule(checkout):
     checkout.addDiscountRule("a", 3, 2)
 
-
+@pytest.mark.skip
 def test_canApplyDiscountRule(checkout):
     checkout.addDiscountRule("a", 3, 2)
     checkout.addItem("a")
