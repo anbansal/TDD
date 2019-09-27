@@ -11,3 +11,6 @@ class Checkout:
 
     def calculateTotal(self):
         return self.total
+
+    def addDiscountRule(self, item, noOfItems, newPrice):
+        return
