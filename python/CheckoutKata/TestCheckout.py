@@ -16,6 +16,8 @@ def test_canAddItemPrice(checkout):
 def test_canAddItem(checkout):
     checkout.addItem("a")
 
+
+
 """
 
 
@@ -31,3 +33,7 @@ def test_canCorrectTotalMultipleItems(checkout):
     checkout.addItem("a")
     checkout.addItem("b")
     assert checkout.calculateTotal() == 3
+
+
+def test_canAddDiscountRule(checkout):
+    checkout.addDiscountRule("a",3,2)
