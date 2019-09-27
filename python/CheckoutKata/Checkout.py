@@ -1,3 +1,6 @@
+from pytest import raises
+
+
 class Checkout:
     class Discount:
         def __init__(self, NbrItems, Price):
