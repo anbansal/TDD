@@ -1,0 +1,18 @@
+Create following unit test and then create enough production code to pass them and
+then finally refactor your code.
+
+***********************************************************************************
+1. Can create instance of checkout class
+2. Can add item price
+3. Can add an item
+4. Can calculate the current total
+5. Can add multiple items and get correct total
+6. Can add a discount rule
+7. Can apply discount rule to the total
+8. Exception is thrown for an item added without a price
+
+
+
+
+
+***********************************************************************************
